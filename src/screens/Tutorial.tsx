@@ -18,6 +18,7 @@ export const Tutorial = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? colors.neutrals[900] : colors.neutrals[100],
     flex: 1,
+    marginTop: 20,
   }
 
   return (

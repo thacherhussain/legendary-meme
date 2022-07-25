@@ -7,17 +7,18 @@ import {
   View,
 } from 'react-native'
 
-import { useTheme } from 'native-base'
+import { useTheme, Button, Box } from 'native-base'
 
 import { PrimaryText, Section } from '@components'
 
-export const Home = () => {
+export const Home = ({ navigation }) => {
   const { colors } = useTheme()
   const isDarkMode = useColorScheme() === 'dark'
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? colors.neutrals[900] : colors.neutrals[100],
     flex: 1,
+    marginTop: 20,
   }
 
   return (
@@ -43,6 +44,14 @@ export const Home = () => {
             edits.
           </Section>
         </View>
+        <Box margin={'10'}>
+          <Button
+            bgColor={colors.brand[800]}
+            onPress={() => navigation.navigate('Details')}
+          >
+            Details
+          </Button>
+        </Box>
       </ScrollView>
     </SafeAreaView>
   )

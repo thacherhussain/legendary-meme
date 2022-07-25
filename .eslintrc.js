@@ -19,10 +19,10 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint'],
-  rules: {},
   settings: {
     react: {
       version: 'detect',
     },
   },
+  rules: {},
 }

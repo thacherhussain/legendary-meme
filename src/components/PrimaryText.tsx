@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { View, Text } from 'react-native'
+import { Box, Text } from 'native-base'
 
 type PrimaryTextProps = {
   text: string
@@ -8,10 +8,10 @@ type PrimaryTextProps = {
 export const PrimaryText: FC<PrimaryTextProps> = (props) => {
   const { text } = props
   return (
-    <View>
-      <Text style={{ color: 'blue', fontSize: 18, fontWeight: 'bold' }}>
+    <Box>
+      <Text fontSize={'md'} color={'blue.500'} fontWeight={'bold'}>
         {text}
       </Text>
-    </View>
+    </Box>
   )
 }

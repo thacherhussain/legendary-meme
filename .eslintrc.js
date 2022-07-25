@@ -23,5 +23,8 @@ module.exports = {
       version: 'detect',
     },
   },
-  rules: {},
+  rules: {
+    'react/no-unescaped-entities': 0,
+    '@typescript-eslint/no-empty-interface': 0,
+  },
 }

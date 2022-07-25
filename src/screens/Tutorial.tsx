@@ -3,27 +3,21 @@ import {
   SafeAreaView,
   ScrollView,
   StatusBar,
-  StyleSheet,
-  Text,
   useColorScheme,
   View,
 } from 'react-native'
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen'
+import { useTheme, Text } from 'native-base'
 
 import { PrimaryText, Section } from '@components'
 
 export const Tutorial = () => {
+  const { colors } = useTheme()
   const isDarkMode = useColorScheme() === 'dark'
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? colors.neutrals[900] : colors.neutrals[100],
+    flex: 1,
   }
 
   return (
@@ -33,10 +27,11 @@ export const Tutorial = () => {
         contentInsetAdjustmentBehavior='automatic'
         style={backgroundStyle}
       >
-        <Header />
         <View
           style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+            backgroundColor: isDarkMode
+              ? colors.neutrals[900]
+              : colors.neutrals[100],
           }}
         >
           <Section title={'Step Zero'}>
@@ -44,27 +39,14 @@ export const Tutorial = () => {
             <PrimaryText text={'With Native Base Styling!'} />
           </Section>
           <Section title='Step One'>
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+            Edit{' '}
+            <Text fontSize={'lg'} fontWeight={700}>
+              App.tsx
+            </Text>{' '}
+            to change this screen and then come back to see your edits.
           </Section>
-          <Section title='See Your Changes'>
-            <ReloadInstructions />
-          </Section>
-          <Section title='Debug'>
-            <DebugInstructions />
-          </Section>
-          <Section title='Learn More'>
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
         </View>
       </ScrollView>
     </SafeAreaView>
   )
 }
-
-const styles = StyleSheet.create({
-  highlight: {
-    fontWeight: '700',
-  },
-})

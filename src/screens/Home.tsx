@@ -10,8 +10,9 @@ import {
 import { useTheme, Button, Box } from 'native-base'
 
 import { PrimaryText, Section } from '@components'
+import { HomeProps } from 'src/navigation/types'
 
-export const Home = ({ navigation }) => {
+export const Home = ({ navigation }: HomeProps) => {
   const { colors } = useTheme()
   const isDarkMode = useColorScheme() === 'dark'
 

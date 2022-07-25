@@ -43,7 +43,7 @@ export const Navigation = () => {
         }}
       >
         <MainStack.Screen
-          name='Drawer'
+          name='DrawerHome'
           component={DrawerNav}
           options={{
             headerShown: false,

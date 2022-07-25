@@ -6,7 +6,7 @@ const newColorTheme = {
     700: '#34B1FE',
   },
   neutrals: {
-    100: '##f3f3f3',
+    100: '#f3f3f3',
     900: '#222222',
   },
 }

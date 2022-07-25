@@ -21,7 +21,9 @@
     "paths": {
       "@src": ["src"],
       "@components": ["src/components"],
-      "@screens": ["src/screens"]
+      "@screens": ["src/screens"],
+      "@navigation": ["src/navigation"],
+      "@utils": ["src/utils"]
     }
   },
   "exclude": [

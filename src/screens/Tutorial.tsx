@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native'
 
-import { useTheme, Text } from 'native-base'
+import { useTheme } from 'native-base'
 
 import { PrimaryText, Section } from '@components'
 
@@ -39,11 +39,8 @@ export const Tutorial = () => {
             <PrimaryText text={'With Native Base Styling!'} />
           </Section>
           <Section title='Step One'>
-            Edit{' '}
-            <Text fontSize={'lg'} fontWeight={700}>
-              App.tsx
-            </Text>{' '}
-            to change this screen and then come back to see your edits.
+            Edit App.tsx to change this screen and then come back to see your
+            edits.
           </Section>
         </View>
       </ScrollView>

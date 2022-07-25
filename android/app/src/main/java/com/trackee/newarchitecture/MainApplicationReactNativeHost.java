@@ -1,4 +1,4 @@
-package com.trackee.newarchitecture;
+package com.legendarymeme.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.trackee.BuildConfig;
-import com.trackee.newarchitecture.components.MainComponentsRegistry;
-import com.trackee.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.legendarymeme.BuildConfig;
+import com.legendarymeme.newarchitecture.components.MainComponentsRegistry;
+import com.legendarymeme.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

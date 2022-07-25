@@ -1,5 +1,5 @@
 import android.os.Bundle;
-package com.trackee;
+package com.legendarymeme;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "trackee";
+    return "legendarymeme";
   }
 
   /**

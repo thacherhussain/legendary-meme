@@ -1,4 +1,4 @@
-package com.trackee.newarchitecture.components;
+package com.legendarymeme.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

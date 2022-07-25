@@ -9,7 +9,7 @@ export const PrimaryText: FC<PrimaryTextProps> = (props) => {
   const { text } = props
   return (
     <Box>
-      <Text fontSize={'md'} color={'blue.500'} fontWeight={'bold'}>
+      <Text fontSize={'md'} color={'brand.800'} fontWeight={'bold'}>
         {text}
       </Text>
     </Box>

@@ -26,5 +26,6 @@ module.exports = {
   rules: {
     'react/no-unescaped-entities': 0,
     '@typescript-eslint/no-empty-interface': 0,
+    'no-undef': 'off',
   },
 }

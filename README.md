@@ -7,3 +7,4 @@ Scaffold of a typescript react native app including:
     - native base UI library with theme
     - basic directory structure with three screens
     - react navigation drawer navigation nested within a stack navigator
+    - created Page component to simplify adding multiple screens

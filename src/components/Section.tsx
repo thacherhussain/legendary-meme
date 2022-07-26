@@ -1,6 +1,7 @@
 import React, { type PropsWithChildren } from 'react'
-import { View, Text, useColorScheme, StyleSheet } from 'react-native'
+import { useColorScheme, View } from 'react-native'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
+import { Text } from 'native-base'
 
 export const Section: React.FC<
   PropsWithChildren<{
@@ -9,43 +10,23 @@ export const Section: React.FC<
 > = ({ children, title }) => {
   const isDarkMode = useColorScheme() === 'dark'
   return (
-    <View style={styles.sectionContainer}>
+    <View style={{ marginHorizontal: 8, marginVertical: 16 }}>
       <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}
+        fontSize={24}
+        lineHeight={24}
+        fontWeight={600}
+        color={isDarkMode ? Colors.white : Colors.black}
       >
         {title}
       </Text>
       <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}
+        marginTop={2}
+        fontSize={16}
+        fontWeight={400}
+        color={isDarkMode ? Colors.light : Colors.dark}
       >
         {children}
       </Text>
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-})

@@ -1,50 +1,22 @@
 import React from 'react'
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  useColorScheme,
-  View,
-} from 'react-native'
 
-import { useTheme } from 'native-base'
-
-import { PrimaryText, Section } from '@components'
+import { PrimaryText, Section, Page } from '@components'
 
 export const Details = () => {
-  const { colors } = useTheme()
-  const isDarkMode = useColorScheme() === 'dark'
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? colors.neutrals[900] : colors.neutrals[100],
-    flex: 1,
-    marginTop: 20,
-  }
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior='automatic'
-        style={backgroundStyle}
-      >
-        <View
-          style={{
-            backgroundColor: isDarkMode
-              ? colors.neutrals[900]
-              : colors.neutrals[100],
-          }}
-        >
-          <Section title={'Details'}>
-            <PrimaryText text={'Absolute Imports are working!'} />
-            <PrimaryText text={'With Native Base Styling!'} />
-          </Section>
-          <Section title='Step One'>
-            Edit App.tsx to change this screen and then come back to see your
-            edits.
-          </Section>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <Page smallMarginTop>
+      <Section title={'Details'}>
+        <PrimaryText
+          text={
+            'Very jealous pupper you are doing me the shock, fren many pats'
+          }
+        />
+      </Section>
+      <Section title='Step One'>
+        Doing me a frighten very taste wow shooberino dat tungg tho clouds,
+        waggy wags sub woofer. Very jealous pupper maximum borkdrive pupper
+        clouds, I am bekom fat. h*ck.
+      </Section>
+    </Page>
   )
 }

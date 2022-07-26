@@ -1,22 +1,18 @@
 import React from 'react'
+import { Center } from 'native-base'
 
-import { PrimaryText, Section, Page } from '@components'
+import { Page, BodyText } from '@components'
 
 export const Details = () => {
   return (
     <Page smallMarginTop>
-      <Section title={'Details'}>
-        <PrimaryText
+      <Center>
+        <BodyText
           text={
-            'Very jealous pupper you are doing me the shock, fren many pats'
+            'Doggorino shooberino doing me a frighten blop mlem porgo heckin angery woofer long woofer, pupper many pats heckin good boys and girls floofs super chub.'
           }
         />
-      </Section>
-      <Section title='Step One'>
-        Doing me a frighten very taste wow shooberino dat tungg tho clouds,
-        waggy wags sub woofer. Very jealous pupper maximum borkdrive pupper
-        clouds, I am bekom fat. h*ck.
-      </Section>
+      </Center>
     </Page>
   )
 }

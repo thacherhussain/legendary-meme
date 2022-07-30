@@ -6,7 +6,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import { useTheme } from 'native-base'
 
 import { lightTheme, darkTheme } from '../utils/navTheme'
-import { Home, Tutorial, Details } from '@screens'
+import { Home, Tutorial, Profile } from '@screens'
 import { CustomDrawer } from './CustomDrawer'
 
 const MainStack = createNativeStackNavigator()
@@ -25,6 +25,7 @@ export const Navigation = () => {
           drawerActiveTintColor: colors.brand[800],
           drawerInactiveTintColor: colors.brand[700],
           headerTransparent: true,
+          headerTintColor: colors.brand[700],
         }}
       >
         <DrawerStack.Screen name='Home' component={Home} />
@@ -38,8 +39,10 @@ export const Navigation = () => {
     // @ts-ignore
     <NavigationContainer theme={scheme === 'dark' ? darkTheme : lightTheme}>
       <MainStack.Navigator
+        initialRouteName='DrawerHome'
         screenOptions={{
           headerTransparent: true,
+          headerTintColor: colors.brand[700],
         }}
       >
         <MainStack.Screen
@@ -49,7 +52,7 @@ export const Navigation = () => {
             headerShown: false,
           }}
         />
-        <MainStack.Screen name='Details' component={Details} />
+        <MainStack.Screen name='Profile' component={Profile} />
       </MainStack.Navigator>
     </NavigationContainer>
   )

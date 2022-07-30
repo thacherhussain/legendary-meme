@@ -29,7 +29,7 @@
   resolved "https://registry.npmjs.org/@babel/compat-data/-/compat-data-7.18.8.tgz"
   integrity sha512-HSmX4WZPPK3FUxYp7g2T6EyO8j96HlZJlxmKPSh6KAcqwyDrfx7hKjXpAW/0FhFfTJsR0Yt4lAjLI2coMptIHQ==
 
-"@babel/core@^7.1.0", "@babel/core@^7.12.3", "@babel/core@^7.12.9", "@babel/core@^7.13.16", "@babel/core@^7.14.0", "@babel/core@^7.7.5":
+"@babel/core@^7.1.0", "@babel/core@^7.12.3", "@babel/core@^7.12.9", "@babel/core@^7.13.16", "@babel/core@^7.14.0", "@babel/core@^7.17.2", "@babel/core@^7.7.5":
   version "7.18.9"
   resolved "https://registry.npmjs.org/@babel/core/-/core-7.18.9.tgz"
   integrity sha512-1LIb1eL8APMy91/IMW+31ckrfBM4yCoLaVzoDhZUKSM4cu1L1nIidyxkCgzPAgrC5WEz36IPEr/eSeSF9pIn+g==
@@ -735,7 +735,7 @@
     pirates "^4.0.5"
     source-map-support "^0.5.16"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.17.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.8.7":
   version "7.18.9"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.18.9.tgz"
   integrity sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw==
@@ -1141,6 +1141,17 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
+
+"@native-base/icons@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@native-base/icons/-/icons-0.0.11.tgz#aeb3215ace21da30e264bbbb5c5e2136a5d25612"
+  integrity sha512-atpcvUwQOs83ikUC6x098vDluBJdws5+TcRH/D+Ol63Rh6WYQaOIEQuMKZi9498iVEdqky7CHEDywvtDQt62nQ==
+  dependencies:
+    "@babel/core" "^7.17.2"
+    "@babel/runtime" "^7.17.2"
+    expo-font "^10.0.5"
+    react "^17.0.2"
+    react-native-vector-icons "^9.0.0"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -3164,6 +3175,15 @@ cliui@^6.0.0:
     strip-ansi "^6.0.0"
     wrap-ansi "^6.2.0"
 
+cliui@^7.0.2:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/cliui/-/cliui-7.0.4.tgz#a0265ee655476fc807aea9df3df8df7783808b4f"
+  integrity sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==
+  dependencies:
+    string-width "^4.2.0"
+    strip-ansi "^6.0.0"
+    wrap-ansi "^7.0.0"
+
 clone-deep@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/clone-deep/-/clone-deep-4.0.1.tgz"
@@ -4034,6 +4054,13 @@ expect@^26.6.2:
     jest-message-util "^26.6.2"
     jest-regex-util "^26.0.0"
 
+expo-font@^10.0.5:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-10.1.0.tgz#2e8f8954943c5afca8444c1ffb1d74623c6a4fb6"
+  integrity sha512-vmhzpE95Ym4iOj8IELof+C/3Weert2B3LyxV5rBjGosjzBdov+o+S6b5mN7Yc9kyEGykwB6k7npL45X3hFYDQA==
+  dependencies:
+    fontfaceobserver "^2.1.0"
+
 extend-shallow@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/extend-shallow/-/extend-shallow-2.0.1.tgz"
@@ -4205,6 +4232,11 @@ flow-parser@^0.121.0:
   resolved "https://registry.npmjs.org/flow-parser/-/flow-parser-0.121.0.tgz"
   integrity sha512-1gIBiWJNR0tKUNv8gZuk7l9rVX06OuLzY9AoGio7y/JT4V1IZErEMEq2TJS+PFcw/y0RshZ1J/27VfK1UQzYVg==
 
+fontfaceobserver@^2.1.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-2.3.0.tgz#5fb392116e75d5024b7ec8e4f2ce92106d1488c8"
+  integrity sha512-6FPvD/IVyT4ZlNe7Wcn5Fb/4ChigpucKYSvD6a+0iMoLn2inpo711eyIcKjmDtE5XNcgAkSH9uN/nfAeZzHEfg==
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/for-in/-/for-in-1.0.2.tgz"
@@ -4289,7 +4321,7 @@ gensync@^1.0.0-beta.2:
   resolved "https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.2.tgz"
   integrity sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==
 
-get-caller-file@^2.0.1:
+get-caller-file@^2.0.1, get-caller-file@^2.0.5:
   version "2.0.5"
   resolved "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz"
   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
@@ -6791,6 +6823,11 @@ react-freeze@^1.0.0:
   resolved "https://registry.yarnpkg.com/react-freeze/-/react-freeze-1.0.0.tgz#b21c65fe1783743007c8c9a2952b1c8879a77354"
   integrity sha512-yQaiOqDmoKqks56LN9MTgY06O0qQHgV4FUrikH357DydArSZHQhl0BJFqGKIZoTqi8JizF9Dxhuk1FIZD6qCaw==
 
+react-hook-form@^7.33.1:
+  version "7.33.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.33.1.tgz#8c4410e3420788d3b804d62cc4c142915c2e46d0"
+  integrity sha512-ydTfTxEJdvgjCZBj5DDXRc58oTEfnFupEwwTAQ9FSKzykEJkX+3CiAkGtAMiZG7IPWHuzgT6AOBfogiKhUvKgg==
+
 "react-is@^16.12.0 || ^17.0.0 || ^18.0.0", react-is@^18.0.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
@@ -6885,6 +6922,14 @@ react-native-svg@^12.4.1:
     css-select "^5.1.0"
     css-tree "^1.1.3"
 
+react-native-vector-icons@^9.0.0, react-native-vector-icons@^9.2.0:
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-9.2.0.tgz#3c0c82e95defd274d56363cbe8fead8d53167ebd"
+  integrity sha512-wKYLaFuQST/chH3AJRjmOLoLy3JEs1JR6zMNgTaemFpNoXs0ztRnTxcxFD9xhX7cJe1/zoN5BpQYe7kL0m5yyA==
+  dependencies:
+    prop-types "^15.7.2"
+    yargs "^16.1.1"
+
 react-native@0.69.2:
   version "0.69.2"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.69.2.tgz"
@@ -6962,6 +7007,14 @@ react@18.0.0:
   integrity sha512-x+VL6wbT4JRVPm7EGxXhZ8w8LTROaxPXOqhlGyVSrv0sB1jkyFGgXxJ8LVoPRLvPR6/CIZGFmfzqUa2NYeMr2A==
   dependencies:
     loose-envify "^1.1.0"
+
+react@^17.0.2:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
+  integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 read-pkg-up@^7.0.1:
   version "7.0.1"
@@ -8224,6 +8277,15 @@ wrap-ansi@^6.2.0:
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
 
+wrap-ansi@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
+  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+
 wrappy@1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz"
@@ -8285,6 +8347,11 @@ y18n@^4.0.0:
   resolved "https://registry.npmjs.org/y18n/-/y18n-4.0.3.tgz"
   integrity sha512-JKhqTOwSrqNA1NY5lSztJ1GrBiUodLMmIZuLiDaMRJ+itFd+ABVE8XBjOvIWL+rSqNDC74LCSFmlb/U4UZ4hJQ==
 
+y18n@^5.0.5:
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-5.0.8.tgz#7f4934d0f7ca8c56f95314939ddcd2dd91ce1d55"
+  integrity sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==
+
 yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz"
@@ -8297,6 +8364,11 @@ yargs-parser@^18.1.2:
   dependencies:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
+
+yargs-parser@^20.2.2:
+  version "20.2.9"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.9.tgz#2eb7dc3b0289718fc295f362753845c41a0c94ee"
+  integrity sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==
 
 yargs@^15.1.0, yargs@^15.3.1, yargs@^15.4.1:
   version "15.4.1"
@@ -8314,3 +8386,16 @@ yargs@^15.1.0, yargs@^15.3.1, yargs@^15.4.1:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
+
+yargs@^16.1.1:
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
+  integrity sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==
+  dependencies:
+    cliui "^7.0.2"
+    escalade "^3.1.1"
+    get-caller-file "^2.0.5"
+    require-directory "^2.1.1"
+    string-width "^4.2.0"
+    y18n "^5.0.5"
+    yargs-parser "^20.2.2"

@@ -4,7 +4,7 @@ import { Page, PrimaryText, Section } from '@components'
 
 export const Tutorial = () => {
   return (
-    <Page>
+    <Page smallMarginTop>
       <Section title={'Step Zero'}>
         <PrimaryText
           text={

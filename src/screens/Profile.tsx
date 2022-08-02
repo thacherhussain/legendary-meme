@@ -37,7 +37,7 @@ export const Profile = () => {
   }
 
   return (
-    <Page smallMarginTop>
+    <Page>
       <Center>
         <VStack width='90%' space={4}>
           <FormControl isRequired isInvalid={'name' in errors}>

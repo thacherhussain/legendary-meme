@@ -29,7 +29,7 @@ export const Navigation = () => {
         }}
       >
         <DrawerStack.Screen name='Home' component={Home} />
-        <DrawerStack.Screen name='Tutorial' component={Tutorial} />
+        <DrawerStack.Screen name='Profile' component={Profile} />
       </DrawerStack.Navigator>
     )
   }
@@ -52,7 +52,7 @@ export const Navigation = () => {
             headerShown: false,
           }}
         />
-        <MainStack.Screen name='Profile' component={Profile} />
+        <MainStack.Screen name='Tutorial' component={Tutorial} />
       </MainStack.Navigator>
     </NavigationContainer>
   )

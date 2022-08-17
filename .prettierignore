@@ -1,8 +1,8 @@
 node_modules
 yarn.lock
 jest.config.json
-
-/ios
 metro.config.js
 .watchmanconfig
+
+/ios
 index.js

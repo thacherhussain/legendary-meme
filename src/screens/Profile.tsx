@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useTheme, Box, Center, VStack, Checkbox, Button } from 'native-base'
+import { useTheme, Box, Center, VStack, Button } from 'native-base'
 import {
   useForm,
   FormProvider,
@@ -7,12 +7,18 @@ import {
   SubmitErrorHandler,
 } from 'react-hook-form'
 
-import { Page, TextInput, SelectInput, RadioInput } from '@components'
+import {
+  Page,
+  TextInput,
+  SelectInput,
+  RadioInput,
+  CheckboxInput,
+} from '@components'
 
 type FormData = {
   name: string
   day: string
-  // languages: string[]
+  languages: string[]
   typeOfBird: string
 }
 
@@ -58,6 +64,25 @@ const birdOptions = [
   },
 ]
 
+const languageOptions = [
+  {
+    label: 'JavaScript',
+    value: 'js',
+  },
+  {
+    label: 'TypeScript',
+    value: 'ts',
+  },
+  {
+    label: 'Swift',
+    value: 'swift',
+  },
+  {
+    label: 'Objective-C',
+    value: 'objc',
+  },
+]
+
 export const Profile = () => {
   const { colors } = useTheme()
   const { ...methods } = useForm({ mode: 'onChange' })
@@ -92,6 +117,12 @@ export const Profile = () => {
                 label={'What kind of bird are you?'}
                 options={birdOptions}
               />
+              <CheckboxInput
+                name={'langauges'}
+                label='Favorite Languages?'
+                options={languageOptions}
+                rules={{ required: 'required' }}
+              />
             </VStack>
           </FormProvider>
           <Box paddingTop={6}>
@@ -111,8 +142,7 @@ export const Profile = () => {
 }
 
 {
-  /* 
-<FormControl>
+  /* <FormControl>
 <FormControl.Label>Preferred Languages</FormControl.Label>
 <Controller
   control={control}
@@ -142,6 +172,5 @@ export const Profile = () => {
   )}
   name='languages'
 />
-</FormControl>
- */
+</FormControl> */
 }

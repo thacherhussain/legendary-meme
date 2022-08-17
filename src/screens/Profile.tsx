@@ -1,164 +1,103 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useTheme, Box, Center, VStack, Checkbox, Button } from 'native-base'
 import {
-  useTheme,
-  Text,
-  Box,
-  Center,
-  VStack,
-  FormControl,
-  Input,
-  Select,
-  Checkbox,
-  Radio,
-  Button,
-  CheckIcon,
-} from 'native-base'
-import { useForm, Controller } from 'react-hook-form'
+  useForm,
+  FormProvider,
+  SubmitHandler,
+  SubmitErrorHandler,
+} from 'react-hook-form'
 
-import { Page } from '@components'
+import { Page, TextInput, SelectInput, RadioInput } from '@components'
 
 type FormData = {
   name: string
   day: string
-  languages: string[]
+  // languages: string[]
   typeOfBird: string
 }
 
+const dayOptions = [
+  {
+    label: 'Monday',
+    value: 'mon',
+  },
+  {
+    label: 'Tuesday',
+    value: 'tues',
+  },
+  {
+    label: 'Wednesday',
+    value: 'wed',
+  },
+  {
+    label: 'Thursday',
+    value: 'thurs',
+  },
+  {
+    label: 'Friday',
+    value: 'fri',
+  },
+  {
+    label: 'Saturday',
+    value: 'sat',
+  },
+  {
+    label: 'Sunday',
+    value: 'sun',
+  },
+]
+
+const birdOptions = [
+  {
+    label: 'Early Bird',
+    value: 'am',
+  },
+  {
+    label: 'Night Owl',
+    value: 'pm',
+  },
+]
+
 export const Profile = () => {
   const { colors } = useTheme()
-  const {
-    handleSubmit,
-    control,
-    formState: { errors },
-  } = useForm<FormData>()
+  const { ...methods } = useForm({ mode: 'onChange' })
 
-  const onSubmit = (data: FormData) => {
-    console.log(data)
+  const onSubmit: SubmitHandler<FormData> = (data) => console.log({ data })
+
+  const [, setError] = useState<boolean>(false)
+
+  const onError: SubmitErrorHandler<FormData> = (errors) => {
+    return console.log({ errors })
   }
 
   return (
     <Page>
       <Center>
         <VStack width='90%' space={4}>
-          <FormControl isRequired isInvalid={'name' in errors}>
-            <FormControl.Label>First Name</FormControl.Label>
-            <Controller
-              control={control}
-              render={({ field: { onChange, onBlur, value } }) => (
-                <Input
-                  onBlur={onBlur}
-                  onChangeText={(value) => onChange(value)}
-                  value={value}
-                  size={'xl'}
-                  _focus={{
-                    backgroundColor: 'neutrals.100',
-                    borderColor: 'brand.600',
-                  }}
-                />
-              )}
-              name='name'
-              rules={{ required: 'Field is required', minLength: 3 }}
-            />
-            <FormControl.ErrorMessage>
-              {errors.name?.message}
-            </FormControl.ErrorMessage>
-          </FormControl>
-          <FormControl>
-            <FormControl.Label>Favorite Day of the Week</FormControl.Label>
-            <Controller
-              control={control}
-              render={({ field: { onChange, value } }) => (
-                <Select
-                  placeholder='Pick a day'
-                  selectedValue={value}
-                  onValueChange={(itemValue: string) => {
-                    onChange(itemValue)
-                  }}
-                  _selectedItem={{
-                    endIcon: <CheckIcon size='5' />,
-                  }}
-                  size={'xl'}
-                >
-                  <Select.Item label='Monday' value='mon' />
-                  <Select.Item label='Tuesday' value='tues' />
-                  <Select.Item label='Wednesday' value='wed' />
-                  <Select.Item label='Thursday' value='thurs' />
-                  <Select.Item label='Friday' value='fri' />
-                  <Select.Item label='Saturday' value='sat' />
-                  <Select.Item label='Sunday' value='sun' />
-                </Select>
-              )}
-              name='day'
-              defaultValue=''
-            />
-          </FormControl>
-          <FormControl>
-            <FormControl.Label>Preferred Languages</FormControl.Label>
-            <Controller
-              control={control}
-              render={({ field: { onChange } }) => (
-                <Checkbox.Group
-                  onChange={(values) => {
-                    onChange(values)
-                  }}
-                  flexDirection='column'
-                  colorScheme={'brand'}
-                >
-                  <VStack space={2}>
-                    <Checkbox value='js' size={'md'}>
-                      JavaScript
-                    </Checkbox>
-                    <Checkbox value='ts' size={'md'}>
-                      TypeScript
-                    </Checkbox>
-                    <Checkbox value='swift' size={'md'}>
-                      Swift
-                    </Checkbox>
-                    <Checkbox value='objc' size={'md'}>
-                      Objective-C
-                    </Checkbox>
-                  </VStack>
-                </Checkbox.Group>
-              )}
-              name='languages'
-            />
-          </FormControl>
-          <FormControl>
-            <Text
-              fontSize={'sm'}
-              fontWeight={500}
-              color={'gray.500'}
-              paddingBottom={'2'}
-            >
-              Night Owl or Early Bird?
-            </Text>
-            <Controller
-              control={control}
-              render={({ field: { onChange } }) => (
-                <Radio.Group
-                  name='typeOfBird'
-                  flexDirection='row'
-                  onChange={(val) => onChange(val)}
-                  colorScheme={'brand'}
-                >
-                  <Radio value='nightOwl' size={'lg'}>
-                    <Text fontSize={'lg'} ml={1} mr={3}>
-                      Night Owl
-                    </Text>
-                  </Radio>
-                  <Radio value='earlyBird' size={'lg'}>
-                    <Text fontSize={'lg'} ml={1} mr={3}>
-                      Early Bird
-                    </Text>
-                  </Radio>
-                </Radio.Group>
-              )}
-              name='typeOfBird'
-            />
-          </FormControl>
+          <FormProvider {...methods}>
+            <VStack space={4}>
+              <TextInput
+                name={'name'}
+                label={'Name'}
+                setFormError={setError}
+                rules={{ required: 'Name is required' }}
+              />
+              <SelectInput
+                name={'day'}
+                label={'Favorite day of the week'}
+                options={dayOptions}
+              />
+              <RadioInput
+                name={'bird'}
+                label={'What kind of bird are you?'}
+                options={birdOptions}
+              />
+            </VStack>
+          </FormProvider>
           <Box paddingTop={6}>
             <Button
-              onPress={handleSubmit(onSubmit)}
+              // @ts-ignore
+              onPress={methods.handleSubmit(onSubmit, onError)}
               bgColor={colors.brand[600]}
               size={'lg'}
             >
@@ -169,4 +108,40 @@ export const Profile = () => {
       </Center>
     </Page>
   )
+}
+
+{
+  /* 
+<FormControl>
+<FormControl.Label>Preferred Languages</FormControl.Label>
+<Controller
+  control={control}
+  render={({ field: { onChange } }) => (
+    <Checkbox.Group
+      onChange={(values) => {
+        onChange(values)
+      }}
+      flexDirection='column'
+      colorScheme={'brand'}
+    >
+      <VStack space={2}>
+        <Checkbox value='js' size={'md'}>
+          JavaScript
+        </Checkbox>
+        <Checkbox value='ts' size={'md'}>
+          TypeScript
+        </Checkbox>
+        <Checkbox value='swift' size={'md'}>
+          Swift
+        </Checkbox>
+        <Checkbox value='objc' size={'md'}>
+          Objective-C
+        </Checkbox>
+      </VStack>
+    </Checkbox.Group>
+  )}
+  name='languages'
+/>
+</FormControl>
+ */
 }

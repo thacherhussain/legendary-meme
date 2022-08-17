@@ -45,7 +45,7 @@ export const RadioInput: FC<RadioInputProps> = (props) => {
         {...inputProps}
       >
         {options.map((option, i) => (
-          <Radio key={i} value={option.value} size={'md'}>
+          <Radio key={i} value={option.value} size={'md'} colorScheme={'brand'}>
             <Text fontSize={'lg'} ml={1} mr={3}>
               {option.label}
             </Text>

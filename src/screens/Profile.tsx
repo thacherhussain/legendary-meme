@@ -14,6 +14,7 @@ import {
   RadioInput,
   CheckboxInput,
 } from '@components'
+import { dayOptions, birdOptions, languageOptions } from '@utils'
 
 type FormData = {
   name: string
@@ -21,67 +22,6 @@ type FormData = {
   languages: string[]
   typeOfBird: string
 }
-
-const dayOptions = [
-  {
-    label: 'Monday',
-    value: 'mon',
-  },
-  {
-    label: 'Tuesday',
-    value: 'tues',
-  },
-  {
-    label: 'Wednesday',
-    value: 'wed',
-  },
-  {
-    label: 'Thursday',
-    value: 'thurs',
-  },
-  {
-    label: 'Friday',
-    value: 'fri',
-  },
-  {
-    label: 'Saturday',
-    value: 'sat',
-  },
-  {
-    label: 'Sunday',
-    value: 'sun',
-  },
-]
-
-const birdOptions = [
-  {
-    label: 'Early Bird',
-    value: 'am',
-  },
-  {
-    label: 'Night Owl',
-    value: 'pm',
-  },
-]
-
-const languageOptions = [
-  {
-    label: 'JavaScript',
-    value: 'js',
-  },
-  {
-    label: 'TypeScript',
-    value: 'ts',
-  },
-  {
-    label: 'Swift',
-    value: 'swift',
-  },
-  {
-    label: 'Objective-C',
-    value: 'objc',
-  },
-]
 
 export const Profile = () => {
   const { colors } = useTheme()
@@ -139,38 +79,4 @@ export const Profile = () => {
       </Center>
     </Page>
   )
-}
-
-{
-  /* <FormControl>
-<FormControl.Label>Preferred Languages</FormControl.Label>
-<Controller
-  control={control}
-  render={({ field: { onChange } }) => (
-    <Checkbox.Group
-      onChange={(values) => {
-        onChange(values)
-      }}
-      flexDirection='column'
-      colorScheme={'brand'}
-    >
-      <VStack space={2}>
-        <Checkbox value='js' size={'md'}>
-          JavaScript
-        </Checkbox>
-        <Checkbox value='ts' size={'md'}>
-          TypeScript
-        </Checkbox>
-        <Checkbox value='swift' size={'md'}>
-          Swift
-        </Checkbox>
-        <Checkbox value='objc' size={'md'}>
-          Objective-C
-        </Checkbox>
-      </VStack>
-    </Checkbox.Group>
-  )}
-  name='languages'
-/>
-</FormControl> */
 }

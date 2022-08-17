@@ -1,3 +1,6 @@
 export { darkTheme } from './navTheme'
 export { lightTheme } from './navTheme'
 export { theme } from './theme'
+export { birdOptions } from './data'
+export { dayOptions } from './data'
+export { languageOptions } from './data'

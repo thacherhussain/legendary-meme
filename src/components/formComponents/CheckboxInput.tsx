@@ -1,12 +1,6 @@
 import React, { FC } from 'react'
 import { View } from 'react-native'
-import {
-  Text,
-  Radio,
-  IRadioGroupProps,
-  Checkbox,
-  ICheckboxGroupProps,
-} from 'native-base'
+import { Text, Checkbox, ICheckboxGroupProps } from 'native-base'
 import {
   useController,
   useFormContext,
@@ -43,8 +37,9 @@ export const CheckboxInput: FC<CheckboxInputProps> = (props) => {
         </Text>
       )}
       <Checkbox.Group
-        flexDirection={'column'}
         onChange={field.onChange}
+        flexDirection={'column'}
+        colorScheme={'brand'}
         {...inputProps}
       >
         {options.map((option, i) => (

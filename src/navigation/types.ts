@@ -2,7 +2,12 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 
 export type MainStackParamList = {
   Home: undefined
-  Tutorial: undefined
+  Tutorials: undefined
+  TutorialDetail: {
+    id: number
+    subject: string
+    description: string
+  }
 }
 
 export type DrawerStackParamList = {
@@ -12,13 +17,17 @@ export type DrawerStackParamList = {
 
 // MAIN STACK
 export type HomeProps = NativeStackScreenProps<MainStackParamList, 'Home'>
-export type ProfileProps = NativeStackScreenProps<
+export type TutorialProps = NativeStackScreenProps<
   MainStackParamList,
-  'Tutorial'
+  'Tutorials'
+>
+export type TutorialDetailProps = NativeStackScreenProps<
+  MainStackParamList,
+  'TutorialDetail'
 >
 
 // DRAWER STACK
-export type TutorialProps = NativeStackScreenProps<
+export type ProfileProps = NativeStackScreenProps<
   DrawerStackParamList,
   'Profile'
 >

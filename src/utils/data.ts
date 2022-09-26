@@ -58,3 +58,23 @@ export const languageOptions = [
     value: 'objc',
   },
 ]
+
+export const tutorialsData = [
+  {
+    id: 1,
+    subject: 'Puppy Training',
+    description:
+      'puppy training shooberino doing me a frighten blop mlem porgo heckin angery',
+  },
+  {
+    id: 2,
+    subject: 'Recall',
+    description: 'recall woofer long woofer, pupper many pats heckin good boys',
+  },
+  {
+    id: 3,
+    subject: 'Agility',
+    description:
+      'agility mlem porgo heckin angery super chub shooberino many pats',
+  },
+]

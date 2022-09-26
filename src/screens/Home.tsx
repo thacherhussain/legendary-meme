@@ -25,9 +25,9 @@ export const Home = ({ navigation }: HomeProps) => {
       <Box marginY={'8'}>
         <Button
           bgColor={colors.brand[900]}
-          onPress={() => navigation.navigate('Tutorial')}
+          onPress={() => navigation.navigate('Tutorials')}
         >
-          Tutorial
+          Tutorials
         </Button>
       </Box>
     </Page>

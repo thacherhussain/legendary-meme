@@ -11,10 +11,11 @@ import { useTheme } from 'native-base'
 type PageProps = {
   children: React.ReactNode
   smallMarginTop?: boolean
+  noScroll?: boolean
 }
 
 export const Page: FC<PageProps> = (props) => {
-  const { children, smallMarginTop } = props
+  const { children, smallMarginTop, noScroll } = props
   const { colors } = useTheme()
   const isDarkMode = useColorScheme() === 'dark'
 
@@ -27,10 +28,7 @@ export const Page: FC<PageProps> = (props) => {
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior='automatic'
-        style={backgroundStyle}
-      >
+      {noScroll ? (
         <View
           style={{
             backgroundColor: isDarkMode
@@ -41,7 +39,23 @@ export const Page: FC<PageProps> = (props) => {
         >
           {children}
         </View>
-      </ScrollView>
+      ) : (
+        <ScrollView
+          contentInsetAdjustmentBehavior='automatic'
+          style={backgroundStyle}
+        >
+          <View
+            style={{
+              backgroundColor: isDarkMode
+                ? colors.neutrals[900]
+                : colors.neutrals[100],
+              marginHorizontal: 20,
+            }}
+          >
+            {children}
+          </View>
+        </ScrollView>
+      )}
     </SafeAreaView>
   )
 }

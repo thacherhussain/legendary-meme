@@ -6,7 +6,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import { useTheme, HamburgerIcon } from 'native-base'
 
 import { lightTheme, darkTheme } from '../utils/navTheme'
-import { Home, Tutorial, Profile } from '@screens'
+import { Home, Tutorials, Profile, TutorialDetail } from '@screens'
 import { CustomDrawer } from './CustomDrawer'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
@@ -56,7 +56,13 @@ export const Navigation = () => {
             headerShown: false,
           }}
         />
-        <MainStack.Screen name='Tutorial' component={Tutorial} />
+        <MainStack.Screen name='Tutorials' component={Tutorials} />
+        <MainStack.Screen
+          name='TutorialDetail'
+          component={TutorialDetail}
+          // @ts-ignore
+          options={({ route }) => ({ title: route.params.subject })}
+        />
       </MainStack.Navigator>
     </NavigationContainer>
   )

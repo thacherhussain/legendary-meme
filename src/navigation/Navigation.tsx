@@ -3,11 +3,12 @@ import { useColorScheme } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { createDrawerNavigator } from '@react-navigation/drawer'
-import { useTheme } from 'native-base'
+import { useTheme, HamburgerIcon } from 'native-base'
 
 import { lightTheme, darkTheme } from '../utils/navTheme'
 import { Home, Tutorial, Profile } from '@screens'
 import { CustomDrawer } from './CustomDrawer'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const MainStack = createNativeStackNavigator()
 const DrawerStack = createDrawerNavigator()
@@ -21,12 +22,16 @@ export const Navigation = () => {
       <DrawerStack.Navigator
         initialRouteName={'Home'}
         drawerContent={(props) => <CustomDrawer {...props} />}
-        screenOptions={{
-          drawerActiveTintColor: colors.brand[800],
+        screenOptions={({ navigation }) => ({
+          drawerActiveTintColor: colors.brand[600],
           drawerInactiveTintColor: colors.brand[700],
           headerTransparent: true,
-          headerTintColor: colors.brand[700],
-        }}
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
+              <HamburgerIcon ml='6' size={'lg'} color={colors.brand[500]} />
+            </TouchableOpacity>
+          ),
+        })}
       >
         <DrawerStack.Screen name='Home' component={Home} />
         <DrawerStack.Screen name='Profile' component={Profile} />
@@ -42,7 +47,6 @@ export const Navigation = () => {
         initialRouteName='DrawerHome'
         screenOptions={{
           headerTransparent: true,
-          headerTintColor: colors.brand[700],
         }}
       >
         <MainStack.Screen

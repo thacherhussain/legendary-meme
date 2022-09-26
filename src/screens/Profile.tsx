@@ -69,7 +69,7 @@ export const Profile = () => {
             <Button
               // @ts-ignore
               onPress={methods.handleSubmit(onSubmit, onError)}
-              bgColor={colors.brand[600]}
+              bgColor={colors.brand[500]}
               size={'lg'}
             >
               Submit

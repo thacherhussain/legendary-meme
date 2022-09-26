@@ -1,14 +1,14 @@
 import React from 'react'
 import { useColorScheme } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler'
+import { useTheme, HamburgerIcon } from 'native-base'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { createDrawerNavigator } from '@react-navigation/drawer'
-import { useTheme, HamburgerIcon } from 'native-base'
 
-import { lightTheme, darkTheme } from '../utils/navTheme'
+import { lightTheme, darkTheme } from '@utils'
 import { Home, Tutorials, Profile, TutorialDetail } from '@screens'
 import { CustomDrawer } from './CustomDrawer'
-import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const MainStack = createNativeStackNavigator()
 const DrawerStack = createDrawerNavigator()

@@ -1,14 +1,5 @@
 import React from 'react'
-import {
-  Text,
-  Box,
-  FlatList,
-  VStack,
-  HStack,
-  ChevronRightIcon,
-  Button,
-  useTheme,
-} from 'native-base'
+import { Text } from 'native-base'
 
 import { Page } from '@components'
 import { TutorialDetailProps } from 'src/navigation/types'

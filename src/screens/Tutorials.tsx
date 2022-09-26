@@ -36,14 +36,14 @@ export const Tutorials = ({ navigation }: TutorialProps) => {
               pr='5'
               py='2'
             >
-              <HStack space={3} justifyContent='space-between'>
+              <HStack justifyContent='space-between' alignItems={'center'}>
                 <VStack>
                   <Text color='coolGray.800' bold>
                     {item.subject}
                   </Text>
                   <Text color='coolGray.600'>{item.description}</Text>
                 </VStack>
-                <ChevronRightIcon pt={10} />
+                <ChevronRightIcon />
               </HStack>
             </Box>
           </TouchableOpacity>

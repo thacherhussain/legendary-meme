@@ -26,6 +26,7 @@ export const Home = ({ navigation }: HomeProps) => {
         <Button
           bgColor={colors.brand[900]}
           onPress={() => navigation.navigate('Tutorials')}
+          size={'lg'}
         >
           Tutorials
         </Button>

@@ -10,3 +10,8 @@ Scaffold of a typescript react native app including:
     - custom Page component to simplify adding multiple screens
     - simple form using react-hook-form on Profile screen
     - flat list with detail screen per item on Tutorials screen
+
+Optional Next:
+
+    - basic testing
+    - setup storybook

@@ -27,12 +27,14 @@ export const Profile = () => {
   const { colors } = useTheme()
   const { ...methods } = useForm({ mode: 'onChange' })
 
-  const onSubmit: SubmitHandler<FormData> = (data) => console.log({ data })
-
   const [, setError] = useState<boolean>(false)
 
   const onError: SubmitErrorHandler<FormData> = (errors) => {
     return console.log({ errors })
+  }
+
+  const onSubmit: SubmitHandler<FormData> = (data) => {
+    console.log({ data })
   }
 
   return (

@@ -1,27 +1,28 @@
-export { default } from '../storybook'
-
-// import React, { useEffect } from 'react'
-// import 'react-native-gesture-handler'
+import React, { useEffect } from 'react'
+import 'react-native-gesture-handler'
 import { LogBox } from 'react-native'
-// import { NativeBaseProvider } from 'native-base'
-// import SplashScreen from 'react-native-splash-screen'
+import { NativeBaseProvider } from 'native-base'
+import SplashScreen from 'react-native-splash-screen'
 
-// import { theme } from '../src/utils/theme'
-// import { Navigation } from '../src/navigation/Navigation'
+import StorybookUIRoot from '../storybook'
+import { theme } from '../src/utils/theme'
+import { Navigation } from '../src/navigation/Navigation'
 
-// const App = () => {
-//   useEffect(() => {
-//     SplashScreen.hide()
-//   }, [])
+const loadStorybook = false // Update to use ENV variables
 
-//   return (
-//     <NativeBaseProvider theme={theme}>
-//       <Navigation />
-//     </NativeBaseProvider>
-//   )
-// }
+const App = () => {
+  useEffect(() => {
+    SplashScreen.hide()
+  }, [])
 
-// export default App
+  return (
+    <NativeBaseProvider theme={theme}>
+      <Navigation />
+    </NativeBaseProvider>
+  )
+}
+
+export default loadStorybook ? StorybookUIRoot : App
 
 // // Added to stop this warning for the native base checkbox list, this is an open issue with native base
 // // Warning references this github issue -- https://github.com/adobe/react-spectrum/issues/2320

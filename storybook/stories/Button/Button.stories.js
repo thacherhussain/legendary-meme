@@ -1,6 +1,5 @@
 import React from 'react'
 import { Text, Alert } from 'react-native'
-import { action } from '@storybook/addon-actions'
 import { text } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react-native'
 

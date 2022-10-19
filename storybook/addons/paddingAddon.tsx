@@ -4,7 +4,7 @@ import { NativeBaseProvider } from 'native-base'
 
 import { theme } from '../../src/utils/theme'
 
-export const paddingAddon = (storyFn) => (
+export const paddingAddon = (storyFn: any) => (
   <NativeBaseProvider theme={theme}>
     <View
       style={{

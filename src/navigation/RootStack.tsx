@@ -13,7 +13,7 @@ import { CustomDrawer } from './CustomDrawer'
 const MainStack = createNativeStackNavigator()
 const DrawerStack = createDrawerNavigator()
 
-export const Navigation = () => {
+export const RootStack = () => {
   const scheme = useColorScheme()
   const { colors } = useTheme()
 

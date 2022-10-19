@@ -3,26 +3,34 @@ import 'react-native-gesture-handler'
 import { LogBox } from 'react-native'
 import { NativeBaseProvider } from 'native-base'
 import SplashScreen from 'react-native-splash-screen'
+import { RecoilRoot, useRecoilValue } from 'recoil'
+import AppWrapper from './AppWrapper'
+import StorybookUIRoot from '../../storybook'
+import { theme } from '../utils/theme'
+import { RootStack } from '../navigation/RootStack'
+import { storybookState, StorybookStates } from '../recoil/atoms/storybookState'
 
-import StorybookUIRoot from '../storybook'
-import { theme } from '../src/utils/theme'
-import { Navigation } from '../src/navigation/Navigation'
-
-const loadStorybook = false // Update to use ENV variables
+const loadStorybook = true // Update to use ENV variables
 
 const App = () => {
+  // const loadStorybook = useRecoilValue(storybookState)
+  // const goodToLoadStorybook = loadStorybook === StorybookStates.STORYBOOK
+
   useEffect(() => {
     SplashScreen.hide()
   }, [])
 
   return (
     <NativeBaseProvider theme={theme}>
-      <Navigation />
+      <RecoilRoot>
+        <AppWrapper />
+      </RecoilRoot>
     </NativeBaseProvider>
   )
 }
 
-export default loadStorybook ? StorybookUIRoot : App
+// export default loadStorybook ? StorybookUIRoot : App
+export default App
 
 // // Added to stop this warning for the native base checkbox list, this is an open issue with native base
 // // Warning references this github issue -- https://github.com/adobe/react-spectrum/issues/2320

@@ -8,7 +8,7 @@ import StorybookUIRoot from '../storybook'
 import { theme } from '../src/utils/theme'
 import { Navigation } from '../src/navigation/Navigation'
 
-const loadStorybook = true // Update to use ENV variables
+const loadStorybook = false // Update to use ENV variables
 
 const App = () => {
   useEffect(() => {

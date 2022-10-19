@@ -2911,6 +2911,17 @@
     core-js "^3.0.1"
     fast-deep-equal "^2.0.1"
 
+"@storybook/addon-ondevice-backgrounds@^5.3.23":
+  version "5.3.23"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-ondevice-backgrounds/-/addon-ondevice-backgrounds-5.3.23.tgz#f59e858e316520b4b0b3f73ca39e04cb894a4bf1"
+  integrity sha512-zXUGfcSe6jA32W2DY31NQmTa4MFGjuucCis+plACtyzNIxRtnPjAo1Kc5SnCri+HnnNyMyrM4YRoNEwLCfDNAQ==
+  dependencies:
+    "@storybook/addons" "5.3.21"
+    "@storybook/api" "5.3.21"
+    "@storybook/client-api" "5.3.21"
+    core-js "^3.0.1"
+    prop-types "^15.7.2"
+
 "@storybook/addon-ondevice-knobs@^5.3.26":
   version "5.3.26"
   resolved "https://registry.yarnpkg.com/@storybook/addon-ondevice-knobs/-/addon-ondevice-knobs-5.3.26.tgz#1e9e0b4541087d91646c392d64df6de56ff9787d"

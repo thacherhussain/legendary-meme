@@ -4,6 +4,8 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withBackgrounds } from '@storybook/addon-ondevice-backgrounds'
 
 import {name as appName} from '../app.json';
+import {loadStories} from './storyLoader'
+
 import './rn-addons';
 
 addDecorator(withKnobs);
@@ -11,13 +13,14 @@ addDecorator(withBackgrounds);
 
 addParameters({
   backgrounds: [
-    { name: 'dark', value: '#222222', default: true },
-    { name: 'light', value: '#eeeeee' },
+    { name: 'white', value: '#ffffff', default: true },
+    { name: 'grey', value: '#eeeeee' },
   ],
 })
 
 configure(() => {
-  require('./stories');
+  loadStories()
+  // require('./stories');
 }, module);
 
 // Refer to https://github.com/storybookjs/react-native/tree/master/app/react-native#getstorybookui-options

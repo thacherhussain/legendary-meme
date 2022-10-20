@@ -20,7 +20,6 @@ addParameters({
 
 configure(() => {
   loadStories()
-  // require('./stories');
 }, module);
 
 // Refer to https://github.com/storybookjs/react-native/tree/master/app/react-native#getstorybookui-options

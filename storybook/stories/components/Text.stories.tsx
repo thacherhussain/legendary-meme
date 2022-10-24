@@ -2,7 +2,7 @@ import React from 'react'
 import { text } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react-native'
 
-import { paddingAddon } from '../../addons/paddingAddon'
+import { paddingAddon } from '@sb/addons/paddingAddon'
 import { PrimaryText } from '@src/components'
 import { BodyText } from '@src/components'
 

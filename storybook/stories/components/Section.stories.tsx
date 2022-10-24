@@ -2,7 +2,7 @@ import React from 'react'
 import { text } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react-native'
 
-import { paddingAddon } from '../../addons/paddingAddon'
+import { paddingAddon } from '@sb/addons/paddingAddon'
 import { Section } from '@src/components'
 
 const bodyCopy = `Doggo ipsum bork long doggo maximum borkdrive boof pupper blep smol,

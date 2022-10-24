@@ -19,7 +19,7 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@src": ["src"],
+      "@src/*": ["src/*"],
       "@components": ["src/components"],
       "@screens": ["src/screens"],
       "@navigation": ["src/navigation"],

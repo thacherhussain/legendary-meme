@@ -3,8 +3,8 @@ import { text } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react-native'
 
 import { paddingAddon } from '../../addons/paddingAddon'
-import { PrimaryText } from '../../../src/components'
-import { BodyText } from '../../../src/components'
+import { PrimaryText } from '@src/components'
+import { BodyText } from '@src/components'
 
 const bodyCopy = `Doggo ipsum bork long doggo maximum borkdrive boof pupper blep smol,
 much ruin diet yapper floofs shibe snoot. Blop blep corgo smol borking

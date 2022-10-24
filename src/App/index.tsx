@@ -6,7 +6,7 @@ import SplashScreen from 'react-native-splash-screen'
 import { RecoilRoot } from 'recoil'
 
 import AppWrapper from './AppWrapper'
-import { theme } from '../utils/theme'
+import { theme } from '@src/style/theme'
 
 const App = () => {
   useEffect(() => {

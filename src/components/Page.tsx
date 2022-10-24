@@ -6,7 +6,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native'
-import { useTheme } from 'native-base'
+
+import { DefaultColors } from '@src/style/colors'
 
 type PageProps = {
   children: React.ReactNode
@@ -16,11 +17,10 @@ type PageProps = {
 
 export const Page: FC<PageProps> = (props) => {
   const { children, smallMarginTop, noScroll } = props
-  const { colors } = useTheme()
   const isDarkMode = useColorScheme() === 'dark'
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? colors.neutrals[900] : colors.neutrals[100],
+    backgroundColor: isDarkMode ? DefaultColors.dark : DefaultColors.light,
     flex: 1,
     marginTop: smallMarginTop ? 10 : 45,
   }
@@ -32,8 +32,8 @@ export const Page: FC<PageProps> = (props) => {
         <View
           style={{
             backgroundColor: isDarkMode
-              ? colors.neutrals[900]
-              : colors.neutrals[100],
+              ? DefaultColors.dark
+              : DefaultColors.light,
             marginHorizontal: 20,
           }}
         >
@@ -47,8 +47,8 @@ export const Page: FC<PageProps> = (props) => {
           <View
             style={{
               backgroundColor: isDarkMode
-                ? colors.neutrals[900]
-                : colors.neutrals[100],
+                ? DefaultColors.dark
+                : DefaultColors.light,
               marginHorizontal: 20,
             }}
           >

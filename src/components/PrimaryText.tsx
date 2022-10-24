@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { Box, Text } from 'native-base'
+import { DefaultColors } from '@src/style/colors'
 
 type PrimaryTextProps = {
   text?: string
@@ -10,7 +11,11 @@ export const PrimaryText: FC<PrimaryTextProps> = (props) => {
   const { text, children } = props
   return (
     <Box>
-      <Text fontSize={'md'} color={'brand.800'} fontWeight={'bold'}>
+      <Text
+        fontSize={'md'}
+        color={DefaultColors.primaryText}
+        fontWeight={'bold'}
+      >
         {text} {children}
       </Text>
     </Box>

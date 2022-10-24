@@ -10,7 +10,7 @@ const bodyCopy = `Doggo ipsum bork long doggo maximum borkdrive boof pupper blep
 much ruin diet yapper floofs shibe snoot. Blop blep corgo smol borking
 doggo with a long snoot for pats ruff big ol pupper`
 
-storiesOf('Text', module)
+storiesOf('Components / Text', module)
   .addDecorator(paddingAddon)
   .add('primary text', () => (
     <PrimaryText>{text('text', 'henlo fren')}</PrimaryText>

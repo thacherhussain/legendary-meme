@@ -2,7 +2,7 @@ import React from 'react'
 import { View } from 'react-native'
 import { NativeBaseProvider } from 'native-base'
 
-import { theme } from '../../src/utils/theme'
+import { theme } from '@src/style/theme'
 
 export const paddingAddon = (storyFn: any) => (
   <NativeBaseProvider theme={theme}>

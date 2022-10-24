@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 import { useColorScheme } from 'react-native'
+import { Box, Text } from 'native-base'
 
-import { Box, Text, useTheme } from 'native-base'
+import { DefaultColors } from '@src/style/colors'
 
 type BodyTextProps = {
   text?: string
@@ -10,14 +11,15 @@ type BodyTextProps = {
 
 export const BodyText: FC<BodyTextProps> = (props) => {
   const { text, children } = props
-  const { colors } = useTheme()
   const isDarkMode = useColorScheme() === 'dark'
 
   return (
     <Box>
       <Text
         fontSize={'md'}
-        color={isDarkMode ? colors.light[200] : colors.light[700]}
+        color={
+          isDarkMode ? DefaultColors.darkModeText : DefaultColors.primaryText
+        }
       >
         {text} {children}
       </Text>

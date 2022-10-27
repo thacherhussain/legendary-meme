@@ -7,7 +7,7 @@ import { useRecoilState } from 'recoil'
 import {
   storybookState,
   StorybookStates,
-} from '../../src/recoil/atoms/storybookState'
+} from '@src/recoil/atoms/storybookState'
 
 export const ExitPanel = () => {
   const { colors } = useTheme()

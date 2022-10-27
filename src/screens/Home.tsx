@@ -1,8 +1,8 @@
 import React from 'react'
 import { useTheme, Button, Box } from 'native-base'
 
-import { Page, Section, PrimaryText } from '@components'
-import { HomeProps } from 'src/navigation/types'
+import { Page, Section, PrimaryText } from '@src/components'
+import { HomeProps } from '@src/navigation/types'
 
 export const Home = ({ navigation }: HomeProps) => {
   const { colors } = useTheme()

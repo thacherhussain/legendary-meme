@@ -8,10 +8,10 @@ import {
   ChevronRightIcon,
 } from 'native-base'
 
-import { Page } from '@components'
+import { Page } from '@src/components'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import { TutorialProps } from 'src/navigation/types'
-import { tutorialsData } from '@utils'
+import { TutorialProps } from '@src/navigation/types'
+import { tutorialsData } from '@src/utils'
 
 export const Tutorials = ({ navigation }: TutorialProps) => {
   return (

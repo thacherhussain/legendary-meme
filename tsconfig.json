@@ -21,10 +21,6 @@
     "paths": {
       "@src/*": ["src/*"],
       "@sb/*": ["storybook/*"],
-      "@components": ["src/components"],
-      "@screens": ["src/screens"],
-      "@navigation": ["src/navigation"],
-      "@utils": ["src/utils"]
     }
   },
   "exclude": [
@@ -33,5 +29,5 @@
     "metro.config.js",
     "jest.config.js"
   ],
-  "include": ["src"]
+  "include": ["src", "storybook"]
 }

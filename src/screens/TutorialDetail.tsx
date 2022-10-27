@@ -1,8 +1,8 @@
 import React from 'react'
 import { Text } from 'native-base'
 
-import { Page } from '@components'
-import { TutorialDetailProps } from 'src/navigation/types'
+import { Page } from '@src/components'
+import { TutorialDetailProps } from '@src/navigation/types'
 
 export const TutorialDetail = ({ route }: TutorialDetailProps) => {
   return (

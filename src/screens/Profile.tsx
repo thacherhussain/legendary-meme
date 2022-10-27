@@ -13,8 +13,8 @@ import {
   SelectInput,
   RadioInput,
   CheckboxInput,
-} from '@components'
-import { dayOptions, birdOptions, languageOptions } from '@utils'
+} from '@src/components'
+import { dayOptions, birdOptions, languageOptions } from '@src/utils'
 
 type FormData = {
   name: string

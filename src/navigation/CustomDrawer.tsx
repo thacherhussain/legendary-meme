@@ -7,7 +7,10 @@ import {
 } from '@react-navigation/drawer'
 import { Button, useTheme } from 'native-base'
 
-import { storybookState, StorybookStates } from '../recoil/atoms/storybookState'
+import {
+  storybookState,
+  StorybookStates,
+} from '@src/recoil/atoms/storybookState'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore

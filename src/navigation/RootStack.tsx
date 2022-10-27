@@ -7,7 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 
 import { lightTheme, darkTheme } from '@src/style/navTheme'
-import { Home, Tutorials, Profile, TutorialDetail } from '@screens'
+import { Home, Tutorials, Profile, TutorialDetail } from '@src/screens'
 import { CustomDrawer } from './CustomDrawer'
 
 const MainStack = createNativeStackNavigator()

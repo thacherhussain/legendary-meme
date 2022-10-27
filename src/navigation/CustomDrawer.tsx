@@ -24,14 +24,15 @@ export const CustomDrawer = (props) => {
         <View style={{ flex: 1 }}>
           <DrawerItemList {...props} />
         </View>
-
-        <Button
-          mx={2}
-          bgColor={colors.brand[900]}
-          onPress={() => setStorybook(StorybookStates.STORYBOOK)}
-        >
-          Go To Storybook
-        </Button>
+        {__DEV__ ? (
+          <Button
+            mx={2}
+            bgColor={colors.brand[900]}
+            onPress={() => setStorybook(StorybookStates.STORYBOOK)}
+          >
+            Go To Storybook
+          </Button>
+        ) : null}
       </DrawerContentScrollView>
     </View>
   )

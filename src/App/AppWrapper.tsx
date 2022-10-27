@@ -1,9 +1,12 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
 
-import { RootStack } from '../navigation/RootStack'
-import StorybookUIRoot from '../../storybook'
-import { storybookState, StorybookStates } from '../recoil/atoms/storybookState'
+import { RootStack } from '@src/navigation/RootStack'
+import StorybookUIRoot from '@sb/index'
+import {
+  storybookState,
+  StorybookStates,
+} from '@src/recoil/atoms/storybookState'
 
 const AppWrapper = () => {
   const loadStorybook = useRecoilValue(storybookState)

@@ -5,7 +5,8 @@ import { NativeBaseProvider } from 'native-base'
 import SplashScreen from 'react-native-splash-screen'
 import { RecoilRoot } from 'recoil'
 
-import AppWrapper from './AppWrapper'
+import AppWrapper from '@src/App/AppWrapper'
+import { RootStack } from '@src/navigation/RootStack'
 import { theme } from '@src/style/theme'
 
 const App = () => {
@@ -15,9 +16,7 @@ const App = () => {
 
   return (
     <NativeBaseProvider theme={theme}>
-      <RecoilRoot>
-        <AppWrapper />
-      </RecoilRoot>
+      <RecoilRoot>{__DEV__ ? <AppWrapper /> : <RootStack />}</RecoilRoot>
     </NativeBaseProvider>
   )
 }
